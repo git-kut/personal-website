@@ -9,12 +9,10 @@
 		"skipLibCheck": true,
 		"sourceMap": true,
 		"strict": true,
-		"module": "ESNext", // Ensure ES module syntax
-		"moduleResolution": "node", // Use Node.js resolution strategy
+		"moduleResolution": "bundler",
 		"plugins": [{ "name": "typescript-svelte-plugin" }],
 		"types": ["unplugin-icons/types/svelte"]
-	},
-	"include": ["src/**/*"]
+	}
 	// Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
 	// except $lib which is handled by https://kit.svelte.dev/docs/configuration#files
 	//

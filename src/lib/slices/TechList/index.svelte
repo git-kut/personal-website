@@ -4,9 +4,8 @@
 	import type { Content } from '@prismicio/client';
 	import IcBaselineCircle from '~icons/ic/baseline-circle';
 	import { onMount } from 'svelte';
-	import { gsap } from 'gsap'; // Main GSAP library
-	import ScrollTrigger from 'gsap/ScrollTrigger'; // Import ScrollTrigger directly
-
+	import { gsap } from 'gsap';
+	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 	gsap.registerPlugin(ScrollTrigger);
 
 	export let slice: Content.TechListSlice;
@@ -33,7 +32,8 @@
 			{
 				x: (index) => {
 					return index % 2 === 0 ? gsap.utils.random(-550, -450) : gsap.utils.random(450, 550);
-				}
+				},
+				ease: 'power1.inOut'
 			}
 		);
 	});

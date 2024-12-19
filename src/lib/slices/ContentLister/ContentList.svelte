@@ -12,7 +12,6 @@
 	import { gsap } from 'gsap';
 	import Fa6BrandsGithub from '~icons/fa6-brands/github';
 	import HugeiconsGlobe02 from '~icons/hugeicons/globe-02';
-	import ScrollTrigger from 'gsap/ScrollTrigger';
 
 	export let items: Content.BlogpostDocument[] | Content.ProjectDocument[];
 	export let fallbackItemImage: ImageField;
@@ -20,7 +19,6 @@
 	let lastMousePosition = { x: 0, y: 0 };
 	let currentIndex: number | undefined;
 
-	gsap.registerPlugin(ScrollTrigger);
 	// Sorting by Date
 	$: sortedItems = [...items].sort((a, b) => {
 		const dateA = a.data.date ? new Date(a.data.date).getTime() : 0;
@@ -33,8 +31,6 @@
 		const image = isFilled.image(item.data.hover_image) ? item.data.hover_image : fallbackItemImage;
 		return asImageSrc(image, { fit: 'fill', w: 220, h: 320, exp: -10 });
 	});
-
-	gsap.registerPlugin(ScrollTrigger);
 
 	const onItemEnter: Action<HTMLElement, number> = (node, index) => {
 		gsap.fromTo(
