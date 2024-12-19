@@ -9,7 +9,8 @@
 		"skipLibCheck": true,
 		"sourceMap": true,
 		"strict": true,
-		"moduleResolution": "bundler",
+		"module": "ESNext", // Ensure ES module syntax
+		"moduleResolution": "node", // Use Node.js resolution strategy
 		"plugins": [{ "name": "typescript-svelte-plugin" }],
 		"types": ["unplugin-icons/types/svelte"]
 	},

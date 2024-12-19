@@ -15,5 +15,10 @@ export default defineConfig({
 			// Allow access to files from the project root.
 			allow: ['..']
 		}
+	},
+	resolve: {
+		alias: {
+			gsap: 'gsap/gsap.js' // Alias in case there are resolution issues
+		}
 	}
 });
