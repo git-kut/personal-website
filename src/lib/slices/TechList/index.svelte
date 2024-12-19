@@ -4,8 +4,8 @@
 	import type { Content } from '@prismicio/client';
 	import IcBaselineCircle from '~icons/ic/baseline-circle';
 	import { onMount } from 'svelte';
-	import { gsap } from 'gsap';
-	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+	import { gsap } from 'gsap'; // Main GSAP library
+	import ScrollTrigger from 'gsap/ScrollTrigger'; // Import ScrollTrigger directly
 
 	gsap.registerPlugin(ScrollTrigger);
 

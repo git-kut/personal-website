@@ -18,7 +18,7 @@ export default defineConfig({
 	},
 	resolve: {
 		alias: {
-			gsap: 'gsap/gsap.js' // Alias in case there are resolution issues
+			gsap: 'gsap/dist/gsap.js' // Alias in case there are resolution issues
 		}
 	}
 });
