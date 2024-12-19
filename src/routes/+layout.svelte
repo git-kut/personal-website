@@ -30,7 +30,7 @@
 </main>
 <div class="background-gradient absolute inset-0 -z-10 max-h-screen"></div>
 <div
-	class="pointer-events-none absolute inset-0 -z-9 h-full bg-[url('noisetexture.jpg')] opacity-20 mix-blend-soft-light"
+	class="pointer-events-none absolute inset-0 -z-9 h-full bg-[url('/noisetexture.jpg')] opacity-20 mix-blend-soft-light"
 ></div>
 
 <Footer settings={data.settings} />
