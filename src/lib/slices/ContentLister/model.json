@@ -1,0 +1,61 @@
+{
+  "id": "content_lister",
+  "type": "SharedSlice",
+  "name": "ContentLister",
+  "description": "ContentLister",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "Text",
+          "config": {
+            "label": "Heading",
+            "placeholder": ""
+          }
+        },
+        "content_type": {
+          "type": "Select",
+          "config": {
+            "label": "Content Type",
+            "placeholder": "",
+            "options": [
+              "Blog",
+              "Project"
+            ]
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "strong,paragraph,em,hyperlink"
+          }
+        },
+        "view_more": {
+          "type": "Text",
+          "config": {
+            "label": "View More",
+            "placeholder": ""
+          }
+        },
+        "fallback_image": {
+          "type": "Image",
+          "config": {
+            "label": "Fallback Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
