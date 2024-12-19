@@ -10,9 +10,9 @@
 	import type { Action } from 'svelte/action';
 	import IcBaselineArrowOutward from '~icons/ic/baseline-arrow-outward';
 	import { gsap } from 'gsap';
-	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 	import Fa6BrandsGithub from '~icons/fa6-brands/github';
 	import HugeiconsGlobe02 from '~icons/hugeicons/globe-02';
+	import ScrollTrigger from 'gsap/ScrollTrigger';
 
 	export let items: Content.BlogpostDocument[] | Content.ProjectDocument[];
 	export let fallbackItemImage: ImageField;
@@ -20,6 +20,7 @@
 	let lastMousePosition = { x: 0, y: 0 };
 	let currentIndex: number | undefined;
 
+	gsap.registerPlugin(ScrollTrigger);
 	// Sorting by Date
 	$: sortedItems = [...items].sort((a, b) => {
 		const dateA = a.data.date ? new Date(a.data.date).getTime() : 0;
