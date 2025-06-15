@@ -8,6 +8,7 @@
 	export let geometry: THREE.BufferGeometry = new THREE.IcosahedronGeometry(3);
 	export let rate = 0.5;
 	let visible = false;
+	const isSmallScreen = window.innerWidth <= 768;
 
 	const soundEffects = [
 		new Audio('/sounds/hit1.ogg'),
@@ -41,7 +42,7 @@
 
 	function getRandomMaterial() {
 		const randomInt = gsap.utils.random(1, 5, 1);
-		if (randomInt === 1) {
+		if (randomInt === 1 || isSmallScreen) {
 			return new THREE.MeshNormalMaterial();
 		}
 		return new THREE.MeshStandardMaterial(gsap.utils.random(materialParameters));
@@ -79,7 +80,7 @@
 	});
 </script>
 
-<Threlte.Group position={position.map((p) => p * 2)}>
+<Threlte.Group position={[position[0] * 2, position[1] * 2, position[2] * 2]}>
 	<Float
 		speed={5 * rate}
 		rotationSpeed={5 * rate}
