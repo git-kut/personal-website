@@ -8,7 +8,7 @@
 	export let geometry: THREE.BufferGeometry = new THREE.IcosahedronGeometry(3);
 	export let rate = 0.5;
 	let visible = false;
-	const isSmallScreen = window.innerWidth <= 768;
+	const isSmallScreen = window.innerWidth <= 1024;
 
 	const soundEffects = [
 		new Audio('/sounds/hit1.ogg'),
